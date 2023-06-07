@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card-container">
+      <div class="front-card">
+        <img src="images/bg-card-front.png" class="front-card-img">
+        <div class="front-text">
+        <img src="images/card-logo.svg" class="card-logo">
+        <h2 id="someNmbrs">0000 0000 0000 0000</h2>
+        <div class="data">
+        <p class="name" id="userName">JANE APPLESEED</p>
+        <div class="data-letters">
+        <p id="data">00</p><p>/</p><p id="data2">00</p>
+      </div>
+      </div>
+  </div>
+  </div>
+  <div class="back-card">
+    <img src="images/bg-card-back.png" class="back-card-img">
+    <p class="cvv" id="cvcCard">000</p>
+  </div>
+  </div>
+
+  <div class="inputs-container">
+    <div class="card-name">
+  <p class="text">CARDHOLDER NAME</p>
+  <div>
+  <input type="text" placeholder="e.g. Jane Appleseed" class="input" id="name">
+  <p class="show" id="show"></p>
+</div>
+</div>
+
+  <div class="card">
+  <p class="text">CARD NUMBER</p>
+  <div>
+  <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="input" oninput="formatCardNumber(this)" maxlength="19" id="numbers">
+  <p class="show" id="show2"></p>
+</div>
+</div>
+
+<div class="box">
+  <div class="date">
+  <p class="text">EXP. DATE (MM/YY)</p>
+  <div class="my">
+    <div>
+  <input type="text" placeholder="MM" class="small" maxlength="2" id="date1">
+  <input type="text" placeholder="YY" class="small" maxlength="2" id="date2">
+  <p class="show" id="show3"></p>
+</div>
+  </div>
+</div>
+
+<div class="cvv-input">
+  <p class="text">CVC</p>
+  <input type="text" placeholder="e.g. 123" class="medium" maxlength="3" id="cvc">
+  <p class="show" id="show4"></p>
+</div>
+</div>
+<button type="submit" class="confirm" onclick="allFunctions()">Confirm</button>
+</div>
+<div class="main-container">
+<div class="completion">
+  <img src="images/icon-complete.svg" class="complete">
+  <h1 class="thank">THANK YOU!</h1>
+  <p class="details">We've added your card details</p>
+  <button class="continue">Continue</button>
+</div>
+</div>
+</div>
+  <!-- Completed state start -->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="app.js"></script>
+</body>
+</html>
